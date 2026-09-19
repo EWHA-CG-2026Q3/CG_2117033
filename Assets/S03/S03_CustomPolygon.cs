@@ -24,7 +24,13 @@ public class S03_CustomPolygon : MonoBehaviour
         int[] triangles = new int[]
         {
               // 예: 0, 1, 2,
-              
+            2,1,0,
+            2,0,7,
+            2,7,6,
+            2,6,5,
+            2,5,4,
+            2,4,3
+
 
         };
 
