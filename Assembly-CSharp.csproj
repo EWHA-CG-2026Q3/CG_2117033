@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\S04\S04_NormalVisualizer.cs" />
     <Compile Include="Assets\S04\S04_Diamond.cs" />
+    <Compile Include="Assets\S05\S05_MyMeshRenderer.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\S03\S03_CustomPolygon.cs" />
   </ItemGroup>
