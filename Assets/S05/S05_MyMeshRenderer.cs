@@ -96,6 +96,7 @@ public class S05_MyMeshRenderer : MonoBehaviour
                 bool isColorA = ((x / size) + (y / size)) % 2 == 0;
                 Color checkerboardColor = isColorA ? colorA : colorB;
                 // 여기에 SetPixel 호출까지 직접 작성하세요.
+                canvasTexture.SetPixel(x, y, checkerboardColor);
             }
         }
     }
