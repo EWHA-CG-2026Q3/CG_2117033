@@ -49,11 +49,16 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.23f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\S06\S06_OpenGL_Finish.cs" />
     <Compile Include="Assets\S04\S04_NormalVisualizer.cs" />
     <Compile Include="Assets\S04\S04_Diamond.cs" />
     <Compile Include="Assets\S05\S05_MyMeshRenderer.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\S03\S03_CustomPolygon.cs" />
+    <Compile Include="Assets\S06\S06_SoftwareRasterizer_Finish.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\S06\S06_OpenGL_Shader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
