@@ -127,7 +127,26 @@ public class S07_Clipping : MonoBehaviour
     // ── TODO: 아래쪽 경계(y >= boundary)로 자르는 함수를 완성하세요 ──
     private List<Vector2> ClipBottom(List<Vector2> input, float boundary)
     {
-        return input;
+        List<Vector2> output = new List<Vector2>();
+        for (int i = 0; i < input.Count; i++)
+        {
+            Vector2 current = input[i];
+            Vector2 previous = input[(i - 1 + input.Count) % input.Count];
+            bool currentInside = current.y >= boundary;
+            bool previousInside = previous.y >= boundary;
+
+            if (currentInside)
+            {
+                if (!previousInside) output.Add(GetIntersectionY(previous, current, boundary));
+                output.Add(current);
+            }
+            else if (previousInside)
+            {
+                output.Add(GetIntersectionY(previous, current, boundary));
+            }
+        }
+        return output;
+
 
         // TODO: ClipLeft와 같은 구조, 비교 축만 x → y로 바뀝니다.
     }
