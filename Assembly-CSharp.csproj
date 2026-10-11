@@ -52,7 +52,10 @@
     <Compile Include="Assets\S06\S06_OpenGL_Finish.cs" />
     <Compile Include="Assets\S04\S04_NormalVisualizer.cs" />
     <Compile Include="Assets\S04\S04_Diamond.cs" />
+    <Compile Include="Assets\S08\S08_BuiltinCompare.cs" />
     <Compile Include="Assets\S05\S05_MyMeshRenderer.cs" />
+    <Compile Include="Assets\S08\DiamondMesh.cs" />
+    <Compile Include="Assets\S08\S08_DirectTransform.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\S03\S03_CustomPolygon.cs" />
     <Compile Include="Assets\S06\S06_SoftwareRasterizer_Finish.cs" />
