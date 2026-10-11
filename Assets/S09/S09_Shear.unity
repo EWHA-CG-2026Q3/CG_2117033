@@ -406,7 +406,7 @@ Mesh:
     firstVertex: 0
     vertexCount: 6
     localAABB:
-      m_Center: {x: 0.9, y: 0.5, z: 0.5}
+      m_Center: {x: 0.10000001, y: 0.5, z: 0.5}
       m_Extent: {x: 0.5, y: 0.5, z: 0.5}
   m_Shapes:
     vertices: []
@@ -486,7 +486,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 144
-    _typelessdata: 0000003f000000000000003f000000000000803f00000000cdcccc3e0000003f000000009f8e1d3f6417fcbe9f8e1d3f3333b33f0000003f000000009f8e1dbf6417fc3e9f8e1d3f3333b33f0000003f0000803f9f8e1dbf6417fc3e9f8e1dbfcdcccc3e0000003f0000803f9f8e1d3f6417fcbe9f8e1dbf6666a63f0000803f0000003f00000000000080bf00000000
+    _typelessdata: 0000003f000000000000003f000000000000803f00000000cdccccbe0000003f000000009f8e1d3f6417fc3e9f8e1d3f9a99193f0000003f000000009e8e1dbf6317fcbe9e8e1d3f9a99193f0000003f0000803f9e8e1dbf6317fcbe9e8e1dbfcdccccbe0000003f0000803f9f8e1d3f6417fc3e9f8e1dbf9a9999be0000803f0000003f00000000000080bf00000000
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -540,7 +540,7 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.9, y: 0.5, z: 0.5}
+    m_Center: {x: 0.10000001, y: 0.5, z: 0.5}
     m_Extent: {x: 0.5, y: 0.5, z: 0.5}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4683ccfe434e598d8d661617ffc5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S09_Shear
-  k: 0.8
+  k: -0.8
 --- !u!23 &1977442022
 MeshRenderer:
   m_ObjectHideFlags: 0
