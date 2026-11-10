@@ -1,12 +1,11 @@
 using UnityEngine;
 
-// 실뭉치가 원을 그리며 바닥을 굴러가기 (필수 ④ 변환: Matrix4x4로 회전 + 이동 + 회전을 결합한 움직임)
-// S10 공 장치(Ball_Orbit → Ball_Offset → Ball_Sphere)를 부모 없이 행렬 하나로 만든 것
+// 실뭉치가 원을 그리며 바닥을 굴러가기 
 //   Rorbit  : Y축으로 돌아서 원을 그림              (= Ball_Orbit)
 //   Toffset : 원의 중심에서 반지름만큼 떨어뜨림       (= Ball_Offset)
 //   Rspin   : 실뭉치 자신이 굴러가는 회전              (= Ball_Sphere의 자전)
 // 굴러간 거리만큼 돌아야 미끄러지지 않음 → 자전 각도 = 굴러간 거리 ÷ 실뭉치 반지름
-// 사용법: YarnBallMesh가 붙은 오브젝트에 함께 붙임. 그 오브젝트의 Transform = 원의 중심 (바닥 위)
+// YarnBallMesh가 붙은 오브젝트에 함께 붙임. 그 오브젝트의 Transform = 원의 중심 (바닥 위)
 [ExecuteAlways]
 [RequireComponent(typeof(YarnBallMesh))]
 public class YarnRoll_Matrix : MonoBehaviour
@@ -32,13 +31,12 @@ public class YarnRoll_Matrix : MonoBehaviour
         //    원 위의 진행 방향이 −Z라서 X축 기준 음수 방향으로 돎
         float spinAngle = -distance / radius * Mathf.Rad2Deg;
 
-        // 3. 행렬 세 개를 하나로 합침 (S10: 부모부터 오른쪽에 곱함)
+        // 3. 행렬 세 개를 하나로 합침 
         Matrix4x4 Rorbit = Matrix4x4.Rotate(Quaternion.Euler(0f, orbitAngle, 0f));        // 원을 그리며 돎
         Matrix4x4 Toffset = Matrix4x4.Translate(new Vector3(orbitRadius, radius, 0f));    // 중심에서 떨어뜨리고 바닥 위로
         Matrix4x4 Rspin = Matrix4x4.Rotate(Quaternion.Euler(spinAngle, 0f, 0f));          // 제자리에서 굴러가는 회전
         Matrix4x4 M = Rorbit * Toffset * Rspin;
-        // 꼭짓점에는 오른쪽부터: 제자리에서 굴러가고(Rspin) → 옆으로 떨어진 뒤(Toffset) → 그 상태로 돌아 원을 그림(Rorbit)
-        // Toffset과 Rorbit의 순서를 바꾸면? 돌고 나서 옮기므로 원을 그리지 않고 한 자리에서만 돎 (S10 슬라이드 44 실험)
+      
 
         // 4. 꼭짓점마다 한 번 곱함 (법선은 방향이라 MultiplyVector: 이동의 영향을 받지 않음, w = 0)
         Vector3[] baseV = yarn.BaseVertices;
